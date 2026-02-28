@@ -1,7 +1,7 @@
 ---
 name: social-push
 description: 使用 agent-browser 帮用户将内容发到社交媒体上。当用户需要发布内容、推送文章、上传文章、发帖到社交平台时使用此 skill。
-disable-model-invocation: true
+disable-model-invocation: false
 allowed-tools: Bash(agent-browser:*), Bash(jq:*), Bash(osascript:*) ,Read
 ---
 
