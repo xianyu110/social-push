@@ -11,7 +11,8 @@ allowed-tools: Bash(agent-browser:*), Bash(jq:*), Bash(osascript:*) ,Read
 你需要使用 bash 运行 agent-browser，并参考 references 中对应平台的 workflow，帮助用户将文章、图片上传到对应的社交平台上
 
 # Rules
-1. 使用 `agent-browser --auto-connect` 自动连接用户的浏览器
+1. 打开用户浏览器：`open -na "Google Chrome" / "Microsoft Edge" --args --remote-debugging-port=9222`, 确保用户打开的浏览器支持远程调试
+2. 使用 `agent-browser --auto-connect` 自动连接用户的浏览器
 3. 最终操作只能是**暂存草稿**，禁止自动点击"发布"按钮，由用户自行确认发布
 4. 每步操作后用 `agent-browser snapshot -i` 确认元素 ref，因为页面状态变化可能导致 ref 编号变化
 
